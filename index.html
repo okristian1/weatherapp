@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="style.css" type="text/css">
   </head>
 <body>
-
 <div class="box">
   <div class="container-fluid text-center">
     <h1>FreeCodeCamp Weather App</h1>
@@ -25,10 +24,11 @@
         <h1 class="icon"></h1>
         <h1 class="summary"></h1>
       <button class="btn btn-default btn-lg currentTempF" id="F"></button>
+      <h1 class="location-info">Waiting for location!</h1>
+      <div class="center-block loader"></div>
       <button class="btn btn-default btn-lg currentTempC" id="C"></button>
-    </div>
   </div>
-  
+    </div>
   <div class = "text-center">
     <div class = "col-xs-12">
         <h3>Powered by:</h3> <img src="https://www.wunderground.com/logos/images/wundergroundLogo_4c.jpg" width="150px">
@@ -42,11 +42,13 @@
 <!-- Github pages does not allow linking to internal .js files.  -->
 <script>
   //find browser lattitude and langitude
+
+
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function (position) {
 //query forecast using geolocation
       
-        $("#C").hide();
+        $("#C, .loader, .location-info").hide();
         $("#F, #C").click(function () {
             $("#C, #F").toggle();
         });
