@@ -42,15 +42,13 @@
 <!-- Github pages does not allow linking to internal .js files.  -->
 <script>
   //find browser lattitude and langitude
-
-if (navigator.geolocation) {
+if (navigator.geolocation) 
     navigator.geolocation.getCurrentPosition(function (position) {
 //query forecast using geolocation
-      
-        $("#C, .loader, .location-info").hide();
-        $("#F, #C").click(function () {
-            $("#C, #F").toggle();
-        });
+    $("#C, .loader, .location-info").hide();
+    $("#F, #C").click(function () {
+        $("#C, #F").toggle();
+    });
 
 var conditions = {"Patches of Fog": "haze-weather.png", 
                    "Shallow Fog": "haze-day",
@@ -90,11 +88,8 @@ var conditions = {"Patches of Fog": "haze-weather.png",
                 $(".icon").html('<img src=icons/' + icon + ' width="120px">');
             }
         }
-              );
+      );
     });
-  
-}
-
  
   </script>
   
