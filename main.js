@@ -9,7 +9,7 @@ if (navigator.geolocation)
 
 var conditions = {"Patches of Fog": "haze-weather.png",
                  "Shallow Fog": "haze-day",
-                 "Overcast": "cloudy-weather",
+                 "Overcast": "cloudy-weather.png",
                  "Clear": "clear day.png",
                  "Partly Cloudy": "partly-cloudy.png",
                  "Mostly Cloudy": "mostly-cloudy.png",
